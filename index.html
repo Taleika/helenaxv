@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Invitación Helena Mis XV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Helena · Mis XV Años">
+<meta property="og:description" content="Porque toda chica tiene su momento de brillar ✨">
+<meta property="og:image" content="https://taleika.github.io/helena/images/miniatura.jpg">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Special Elite', monospace;
+  background:#f6f1eb;
+  color:#4a433e;
+  text-align:center;
+}
+
+h2,h3{ font-weight:400; margin:20px 0; }
+
+p{
+  max-width:720px;
+  margin:0 auto 20px;
+  line-height:1.7;
+}
+
+header{
+  height:100vh;
+  background:url('images/hero.jpg') center 0 / cover no-repeat;
+  position:relative;
+  overflow:hidden;
+}
+
+header img.logo{
+  position:absolute;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  width:360px;
+  max-width:85%;
+}
+
+section{ padding:60px 20px; }
+
+.countdown-section{ background:#e8dfd6; }
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.countdown span{
+  background:#fff;
+  padding:14px 18px;
+  border-radius:8px;
+  min-width:70px;
+}
+
+.icon{ width:160px; margin:0 auto 20px; }
+
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  background:#4a433e;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+}
+
+.green-section{ background:#b7c4b1; color:#fff; }
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+}
+
+.gallery img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+#music-btn{
+  position:fixed;
+  top:20px;
+  left:20px;
+  width:55px;
+  cursor:pointer;
+  z-index:1000;
+}
+
+.parallax{
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center 0;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bg-music" src="images/para-siempre-benjamin-amadeo.mp3" loop></audio>
+<img id="music-btn" src="images/icono-musica_play.svg">
+
+<!-- HERO -->
+<header class="parallax">
+  <img src="images/logo.png" class="logo">
+</header>
+
+<!-- FRASE -->
+<section>
+<h2>Porque toda chica tiene su momento de brillar</h2>
+<p>Te invito a compartir conmigo una noche inolvidable  
+y celebrar mis XV años</p>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section">
+<h2>Faltan…</h2>
+<div class="countdown">
+<span id="days">00<br><small>Días</small></span>
+<span id="hours">00<br><small>Horas</small></span>
+<span id="mins">00<br><small>Min</small></span>
+<span id="secs">00<br><small>Seg</small></span>
+</div>
+</section>
+
+<!-- FIESTA -->
+<section>
+<img src="images/icono-fiesta.svg" class="icon">
+<h2>Fiesta</h2>
+<p>
+<strong>Sábado 28 de Febrero de 2026</strong><br>
+21:30 hs<br>
+Salón Los Robles
+</p>
+</section>
+
+<!-- GALERÍA 1 -->
+<section>
+<div class="gallery">
+  <img src="images/foto1.jpg">
+  <img src="images/foto2.jpg">
+  <img src="images/foto3.jpg">
+  <img src="images/foto4.jpg">
+</div>
+</section>
+
+<!-- CONFIRMACIÓN -->
+<section style="background:#e8dfd6;">
+<h2>Confirmación de Asistencia</h2>
+<p>Hasta el <strong>21/02/2026</strong></p>
+</section>
+
+<!-- DRESS CODE -->
+<section class="green-section">
+<img src="images/icono-dresscode.svg" class="icon">
+<h2>Dress Code</h2>
+<p>Elegante Sport</p>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="parallax" id="instagram" style="background-image:url('images/imagenig.jpg');">
+<img src="images/icono-instagram.svg" class="icon">
+<h2>@hele.dibe</h2>
+<p>Etiquetame en tus fotos y videos</p>
+</section>
+
+<!-- MÚSICA -->
+<section style="background:#e8dfd6;">
+<img src="images/icono-canciones.svg" class="icon">
+<h2>¡Ayudame a elegir la música!</h2>
+<p>Podés sugerir tus canciones favoritas para la fiesta.</p>
+</section>
+
+<!-- GALERÍA 2 -->
+<section>
+<div class="gallery">
+  <img src="images/foto5.jpg">
+  <img src="images/foto6.jpg">
+  <img src="images/foto7.jpg">
+  <img src="images/foto8.jpg">
+</div>
+</section>
+
+<!-- REGALOS -->
+<section class="green-section">
+<img src="images/icono-regalo.svg" class="icon">
+<h2>Regalos</h2>
+<p>
+Banco Galicia<br>
+CBU: 0070364030004000881877<br>
+Alias: hele.2026.cumple
+</p>
+<p>También habrá urna con sobrecitos en el salón.</p>
+</section>
+
+<!-- FRASE FINAL -->
+<section style="background:#e8dfd6;">
+<h2>Gracias por acompañarme</h2>
+</section>
+
+<script>
+const eventDate = new Date("2026-02-28T21:30:00");
+setInterval(()=>{
+  const now=new Date(), diff=eventDate-now;
+  if(diff<=0) return;
+  days.innerHTML=Math.floor(diff/86400000)+"<br><small>Días</small>";
+  hours.innerHTML=Math.floor(diff/3600000%24)+"<br><small>Horas</small>";
+  mins.innerHTML=Math.floor(diff/60000%60)+"<br><small>Min</small>";
+  secs.innerHTML=Math.floor(diff/1000%60)+"<br><small>Seg</small>";
+},1000);
+
+const music=document.getElementById("bg-music");
+const btn=document.getElementById("music-btn");
+let play=false;
+btn.onclick=()=>{ play?music.pause():music.play(); play=!play; };
+
+const parallaxElements=document.querySelectorAll('.parallax');
+window.addEventListener('scroll',()=>{
+  const y=window.pageYOffset;
+  parallaxElements.forEach(el=>{
+    const speed=el.id==='instagram'?0.15:0.25;
+    el.style.backgroundPosition=`center ${-(y*speed)}px`;
+  });
+});
+</script>
+
+</body>
+</html>
