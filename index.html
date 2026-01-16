@@ -267,7 +267,7 @@ h3{
 </header>
 
 <!-- Nueva sección con frase -->
-<section style="background:#fff;">
+<section style="background:#f6f1eb;">
   <h2>Porque toda chica tiene su momento de brillar</h2>
 <p>Te invito a compartir conmigo una noche inolvidable y celebrar mis XV años</p>
 </section>
@@ -360,6 +360,22 @@ h3{
 </section>
 
 <script>
+	// LIGHTBOX
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.querySelectorAll(".gallery img").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+  lightboxImg.src = "";
+});
+
   // Countdown
   const eventDate = new Date("2025-11-01T21:00:00");
   function updateCountdown() {
@@ -377,10 +393,6 @@ h3{
   }
   setInterval(updateCountdown, 1000);
 
-  // Lightbox
-<div class="lightbox" id="lightbox">
-  <img id="lightbox-img" src="" alt="Imagen ampliada">
-</div>
 
   // Parallax suave
   const parallaxElems = document.querySelectorAll('.parallax');
