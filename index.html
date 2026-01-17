@@ -175,7 +175,7 @@ h3{
 
     /* Iconos animados (latido) */
     .icon {
-      width: 216px;
+      width: 275px;
       margin: 0 auto 25px;
       animation: pulse 1.8s ease-in-out infinite;
       display: block;
@@ -239,7 +239,10 @@ h3{
 }
 
 .section-countdown {
-  background: var(--countdown-bg);
+  background-image: url('images/bg1.jpg'); /* ruta de tu JPG */
+  background-size: cover;       /* que cubra toda la sección */
+  background-position: center;  /* centrado */
+  background-repeat: no-repeat; /* que no se repita */
   color: var(--countdown-text);
 }
 
@@ -346,7 +349,7 @@ h3{
 
 <!-- Fiesta -->
 <section>
-  <img src="images/icono-fiesta.svg" alt="Fiesta" class="icon">
+  <img src="images/icono-fiesta.png" alt="Fiesta" class="icon">
   <h2>Fiesta</h2>
   <p><strong>Sábado 28 de Febrero de 2026</strong><br>
   21:30 hs<br>
@@ -357,6 +360,7 @@ h3{
 
 <!-- Galería 1 -->
 <section>
+	<section class="section-gallery section-bg-paper">
   <div class="gallery">
     <img src="images/foto1.jpg" alt="foto1">
     <img src="images/foto2.jpg" alt="foto2">
@@ -395,6 +399,7 @@ h3{
 </section>
 
 <!-- Galería 2 -->
+	<section class="section-gallery section-bg-paper">
 <section>
   <div class="gallery">
     <img src="images/foto5.jpg" alt="foto5">
