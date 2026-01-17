@@ -93,22 +93,23 @@ h3{
 }
 
     /* Header */
-    header {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      padding: 0;
-    }
-    @media (min-width: 769px) {
-      header {
-        height: 100vh;
-        aspect-ratio: auto;
-        padding: 100px 20px;
-      }
-    }
+   header {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;   /* límite para no salirse */
+  margin: 0 auto;      /* centrar */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  aspect-ratio: auto;  /* ajustamos */
+}
+@media (min-width: 769px) {
+  header {
+    height: 100vh;
+    padding: 100px 20px;
+  }
+}
 
  header img.logo {
   position: absolute;
@@ -194,14 +195,14 @@ h3{
       max-width: 100%;
       margin: 0 auto;
     }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
+   .gallery img {
+  width: 100%;
+  height: 180px;       /* cuadrados y uniformes */
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
     .gallery img:hover {
       transform: scale(1.05);
     }
