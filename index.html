@@ -204,11 +204,16 @@ h3{
 
     /* Instagram */
     #instagram {
-      height: 300px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
 
     /* Botón música esquina superior izquierda */
     #music-btn {
@@ -377,7 +382,7 @@ lightbox.addEventListener("click", () => {
 });
 
   // Countdown
-  const eventDate = new Date("2025-11-01T21:00:00");
+  const eventDate = new Date("2026-02-28T21:30:00");
   function updateCountdown() {
     const now = new Date();
     const diff = eventDate - now;
@@ -433,8 +438,11 @@ lightbox.addEventListener("click", () => {
     }
   });
 </script>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="Imagen ampliada">
+</div>
+
 </body>
 </html>
-
-
-
